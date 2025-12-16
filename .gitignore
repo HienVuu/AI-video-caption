@@ -1,0 +1,36 @@
+# --- PYTHON ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# --- DỮ LIỆU & KẾT QUẢ (Không up file nặng) ---
+data/raw/*
+!data/raw/.gitkeep
+output/*
+temp_gradio/
+*.mp4
+*.wav
+*.srt
+
+# --- FILE THỰC THI & HỆ THỐNG ---
+*.exe
+*.dll
+.DS_Store
+Thumbs.db
+
+# --- IDE & EDITOR ---
+.vscode/
+.idea/
+*.ipynb_checkpoints/
+
+# --- CACHE ---
+models/whisper_cache/
+.cache/
+
+# --- LOGS ---
+*.log

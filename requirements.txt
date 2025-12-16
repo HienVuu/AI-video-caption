@@ -1,0 +1,11 @@
+numpy
+pandas
+librosa
+moviepy==1.0.3
+decorator==4.4.2
+imageio-ffmpeg
+tensorflow-cpu
+tensorflow-hub
+openai-whisper
+gradio
+tqdm
