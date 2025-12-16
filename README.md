@@ -43,6 +43,11 @@ This project is an automated video captioning tool that generates subtitles for 
 
 4. Install dependencies:
    pip install -r requirements.txt
+5. Install FFmpeg & FFprobe (Important): This project requires FFmpeg binaries. You can install them automatically by running:
+   
+    python setup.py
+
+Alternatively, you can manually download ffmpeg.exe and ffprobe.exe and place them in the root folder.
 
 ## Important: ImageMagick Configuration
 

@@ -29,14 +29,11 @@ def overlay_subtitles(video_path, subtitles, output_path):
             duration = max(0.5, sub['end'] - sub['start'])
             text = sub['text']
             
-            # Style
             is_sound = text.startswith('[')
             fontsize = 28 if not is_sound else 24
             color = 'yellow' if is_sound else 'white'
             position = ('center', 0.85) if is_sound else ('center', 0.9)
             
-            # Lưu ý: Trên Windows dùng font='Arial', Linux dùng 'Liberation-Sans'
-            # Để auto, ta dùng None hoặc 'Arial'
             txt_clip = TextClip(
                 text, 
                 fontsize=fontsize, 

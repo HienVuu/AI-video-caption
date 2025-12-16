@@ -4,24 +4,24 @@ import shutil
 from moviepy.config import change_settings # Import hàm cấu hình
 
 # ==============================================================================
-# 🔧 CẤU HÌNH MÔI TRƯỜNG (CHỈ ĐỊNH THỦ CÔNG)
+# CẤU HÌNH MÔI TRƯỜNG 
 # ==============================================================================
 print("🔧 Đang cấu hình môi trường...")
 
-# 1. CẤU HÌNH IMAGEMAGICK (QUAN TRỌNG NHẤT)
-# 👇👇👇 DÁN ĐƯỜNG DẪN BẠN VỪA TÌM ĐƯỢC VÀO GIỮA HAI DẤU NHÁY DƯỚI ĐÂY 👇👇👇
+# 1. CẤU HÌNH IMAGEMAGICK
+
 magick_path = r"C:\Program Files\ImageMagick-7.1.2-Q16-HDRI\magick.exe" 
 
 
 if os.path.exists(magick_path):
-    # Ép MoviePy dùng đường dẫn này
+    
     change_settings({"IMAGEMAGICK_BINARY": magick_path})
     print(f"✅ Đã trỏ ImageMagick vào: {magick_path}")
 else:
     print(f"❌ CẢNH BÁO: Đường dẫn ImageMagick sai! File không tồn tại: {magick_path}")
-    # Nếu sai đường dẫn mặc định, code sẽ thử tự tìm một lần nữa (fallback)
     
-# 2. CẤU HÌNH FFMPEG (Giữ nguyên)
+    
+# 2. CẤU HÌNH FFMPEG 
 project_dir = os.getcwd()
 os.environ["PATH"] += os.pathsep + project_dir
 

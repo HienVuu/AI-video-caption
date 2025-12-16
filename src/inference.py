@@ -6,7 +6,7 @@ import tensorflow as tf
 import pandas as pd
 from .config import *
 
-# --- THỦ THUẬT FFMPEG (Giữ nguyên) ---
+# --- THỦ THUẬT FFMPEG ---
 import os
 import imageio_ffmpeg
 os.environ["PATH"] += os.pathsep + os.path.dirname(imageio_ffmpeg.get_ffmpeg_exe())
@@ -48,7 +48,7 @@ def run_whisper(audio_path):
         })
     return segments
 
-# --- LOGIC YAMNET (Đã fix lỗi đa nhãn) ---
+# --- LOGIC YAMNET ---
 def run_yamnet(audio_path):
     print("\n🔍 [YAMNET ANALYSIS] Scanning audio events...")
     model, classes = load_yamnet_model()
